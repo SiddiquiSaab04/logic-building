@@ -30,19 +30,42 @@
 
 // we've to flatten an array
 
-let  array = [1,3,5,2,1,4,2,3,10,44];
+// let  array = [1,3,5,2,1,4,2,3,10,44];
 
-function flattenArray(){
-    for(let i=0; i<array.length; i++){
-        for(let j=i+1; j<array.length; j++){
-            if(array[i] === array[j]){
-                array.splice(j,1);
-            }
-            else{
-                continue;
-            }
+// function flattenArray(){
+//     for(let i=0; i<array.length; i++){
+//         for(let j=i+1; j<array.length; j++){
+//             if(array[i] === array[j]){
+//                 array.splice(j,1);
+//             }
+//             else{
+//                 continue;
+//             }
+//     }
+// }
+// console.log(array);
+// }
+// flattenArray();
+
+
+// converts multidimensional array into single dimensional array
+
+let multiDimensionalArray = [1,2,[3,4],[5,6],[7,8,9],10];
+
+let singleDimensionalArray = [];
+
+function convertToSingleDimensionalArray(){
+    for(let i=0; i<multiDimensionalArray.length; i++){
+if(Array.isArray(multiDimensionalArray[i])){
+    for(let j = 0 ; j < multiDimensionalArray[i].length; j++){
+        singleDimensionalArray.push(multiDimensionalArray[i][j]);
     }
 }
-console.log(array);
+else{
+    singleDimensionalArray.push(multiDimensionalArray[i]);
 }
-flattenArray();
+    } 
+    console.log(singleDimensionalArray);    
+}
+
+convertToSingleDimensionalArray();
