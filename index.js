@@ -73,6 +73,21 @@
 
 // Sort and array without using sort function
 
+// let array = [5, 13, 8, 1, 12, 73];
+// let temp;
+// function sortArray() {
+//     for (let i = 0; i < array.length; i++) {
+//         for (let j = i + 1; j < array.length; j++) {
+//             if (array[i] > array[j]) {
+//                 temp = array[i];
+//                 array[i] = array[j];
+//                 array[j] = temp;
+//             }
+//     }
+// }
+//     console.log(array);
+// }
+// sortArray();
 
 // Max number in an array
 // let array = [5,3,8,1,2,7];
@@ -90,16 +105,16 @@
 
 
 // Min number in an array
-let array = [5,3,8,100,32,7];
-let min;
-function minNumber(){
-    for(let i = 0 ; i < array.length; i++){
-         min = array[i];
-        if(min < array[i+1]){
-            array[i+1] = min;
-        }
-    }
-    console.log(min);
-}
-minNumber();
+// let array = [5,3,8,100,32,7];
+// let min;
+// function minNumber(){
+//     for(let i = 0 ; i < array.length; i++){
+//          min = array[i];
+//         if(min < array[i+1]){
+//             array[i+1] = min;
+//         }
+//     }
+//     console.log(min);
+// }
+// minNumber();
 
