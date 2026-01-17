@@ -50,22 +50,40 @@
 
 // converts multidimensional array into single dimensional array
 
-let multiDimensionalArray = [1,2,[3,4],[5,6],[7,8,9],10];
+// let multiDimensionalArray = [1,2,[3,4],[5,6],[7,8,9],10];
 
-let singleDimensionalArray = [];
+// let singleDimensionalArray = [];
 
-function convertToSingleDimensionalArray(){
-    for(let i=0; i<multiDimensionalArray.length; i++){
-if(Array.isArray(multiDimensionalArray[i])){
-    for(let j = 0 ; j < multiDimensionalArray[i].length; j++){
-        singleDimensionalArray.push(multiDimensionalArray[i][j]);
-    }
-}
-else{
-    singleDimensionalArray.push(multiDimensionalArray[i]);
-}
-    } 
-    console.log(singleDimensionalArray);    
-}
+// function convertToSingleDimensionalArray(){
+//     for(let i=0; i<multiDimensionalArray.length; i++){
+// if(Array.isArray(multiDimensionalArray[i])){
+//     for(let j = 0 ; j < multiDimensionalArray[i].length; j++){
+//         singleDimensionalArray.push(multiDimensionalArray[i][j]);
+//     }
+// }
+// else{
+//     singleDimensionalArray.push(multiDimensionalArray[i]);
+// }
+//     } 
+//     console.log(singleDimensionalArray);    
+// }
 
-convertToSingleDimensionalArray();
+// convertToSingleDimensionalArray();
+
+
+// Sort and array without using sort function
+
+
+// Max number in an array
+// let array = [5,3,8,1,2,7];
+// let max;
+// function maxNumber(){
+//     for(let i = 0 ; i < array.length; i++){
+//          max = array[i];
+//         if(max > array[i+1]){
+//             array[i+1] = max;
+//         }
+//     }
+//     console.log(max);
+// }
+// maxNumber();
