@@ -87,3 +87,19 @@
 //     console.log(max);
 // }
 // maxNumber();
+
+
+// Min number in an array
+let array = [5,3,8,100,32,7];
+let min;
+function minNumber(){
+    for(let i = 0 ; i < array.length; i++){
+         min = array[i];
+        if(min < array[i+1]){
+            array[i+1] = min;
+        }
+    }
+    console.log(min);
+}
+minNumber();
+
