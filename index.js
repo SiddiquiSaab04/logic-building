@@ -118,3 +118,22 @@
 // }
 // minNumber();
 
+// Second largest number in an array
+let array = [100, 345, 44, 19, 33, 460, 21]
+
+function secondLargestNumber() {
+    let temp;
+    for (let i = 0; i < array.length; i++) {
+        secondLargest = i - 1;
+        for (let j = i + 1; j < array.length; j++) {
+            if (array[i] > array[j]) {
+                temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+    }
+    console.log("second largest number is: ", array[array.length - 2]);
+}
+
+secondLargestNumber();
