@@ -139,23 +139,53 @@
 // secondLargestNumber();
 
 // put 0's at the end of an array
-let array = [1,0,2,0,4,3,0,5,0];
-let resultArray = [];
+// let array = [1,0,2,0,4,3,0,5,0];
+// let resultArray = [];
 
-const moveZerosToEnd = () => {
-let count = 0;
-for(let i = 0; i < array.length; i++){
-    if(array[i] !== 0){
-        resultArray.push(array[i]);
-    }
-    else{
-        count++;
-    }   
-}
-for(let i = 0; i < count; i++){
-    resultArray.push(0);
-}
-console.log(resultArray);   
-}
+// const moveZerosToEnd = () => {
+// let count = 0;
+// for(let i = 0; i < array.length; i++){
+//     if(array[i] !== 0){
+//         resultArray.push(array[i]);
+//     }
+//     else{
+//         count++;
+//     }   
+// }
+// for(let i = 0; i < count; i++){
+//     resultArray.push(0);
+// }
+// console.log(resultArray);   
+// }
 
-moveZerosToEnd();
+// moveZerosToEnd();
+
+
+
+// let a = [[12, 44], [41, 5], [4, 23]];
+// let a2 = []; // 12,44,41,5,4,23
+// function transposeMatrix() {
+//     for (let i = 0; i < a.length - 1; i++) {
+//         for (let j = 0; j < a.length; j++) {
+//             a2.push(a[j][i]);
+//         }
+//     }
+//     for (let i = 0; i < a2.length; i++) {
+//         for (let j = i + 1; j < a2.length; j++) {
+//             if (a2[i] > a2[j]) {
+//                 let temp = a2[i];
+//                 a2[i] = a2[j];
+//                 a2[j] = temp;
+//             }
+//         }
+//     }
+//     let cols = 2;
+//     let result = [];
+//     for (let i = 0; i < a2.length; i += cols) {
+//         result.push(a2.slice(i, i + cols));
+//     }
+//  console.log(result);
+
+// }
+// transposeMatrix();
+
