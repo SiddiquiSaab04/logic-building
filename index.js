@@ -189,3 +189,21 @@
 // }
 // transposeMatrix();
 
+function canAttendAllMeetings(meetings) {
+    if (!meetings || meetings.length <= 1) return true;
+
+    meetings.sort((a, b) => a[0] - b[0]);
+
+    for (let i = 0; i < meetings.length - 1; i++) {
+        let currentEnd = meetings[i][1];
+        let nextStart = meetings[i + 1][0];
+
+        if (nextStart <= currentEnd) {
+            return false;
+        }
+    }
+
+    return true;
+}
+let meetings = [[0, 10], [15, 20], [25, 30],[33,77,89]];
+console.log(canAttendAllMeetings(meetings));
