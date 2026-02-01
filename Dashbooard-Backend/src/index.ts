@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 
 
 app.get("/", (req, res) => {
-  res.send("API is running on port 3000");
+  res.send("API is running");
 });
 app.use("/users", userRoutes);
 app.listen(port, () => {
