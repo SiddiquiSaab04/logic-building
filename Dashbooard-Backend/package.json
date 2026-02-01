@@ -2,11 +2,10 @@
   "name": "dashbooard-backend",
   "version": "1.0.0",
   "main": "index.ts",
-  "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "npx ts-node index.ts",
-    "dev": "nodemon --watch './**/*.ts' --exec 'node --loader ts-node/esm' index.ts",
+    "build":"tsc",
+    "start": " node src/index.ts",
+    "dev": "nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,19 +13,16 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "cors": "^2.8.6",
+    "@types/express": "^5.0.6",
+    "bcryptjs": "^3.0.3",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
-    "jsonwebtoken": "^9.0.3",
-    "mysql-promise": "^5.0.0",
-    "mysql2": "^3.16.2"
-  },
-  "devDependencies": {
-    "@types/express": "^5.0.6",
-    "@types/node": "^25.1.0",
-    "eslint": "^9.39.2",
+    "mysql2": "^3.16.2",
     "nodemon": "^3.1.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.0"
   }
 }
