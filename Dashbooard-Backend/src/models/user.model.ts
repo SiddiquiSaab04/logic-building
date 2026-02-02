@@ -15,7 +15,7 @@ const UserModel = {
             email,
             password
         ])
-        return (result as any ) ;
+        return {id: result.insertId, name, email, password, created_at: new Date() }
     },
 
    findByEmail: async (email: string): Promise<User | undefined> => {

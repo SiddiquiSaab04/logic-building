@@ -11,7 +11,7 @@ app.use(express_1.default.json());
 dotenv_1.default.config();
 const port = process.env.PORT || 3000;
 app.get("/", (req, res) => {
-    res.send("API is running on port 3000");
+    res.send("API is running");
 });
 app.use("/users", user_route_1.default);
 app.listen(port, () => {
