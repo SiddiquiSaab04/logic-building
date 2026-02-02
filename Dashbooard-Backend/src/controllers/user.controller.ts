@@ -68,3 +68,22 @@ export const Signin = async (req: Request, res: Response) => {
 
     }
 }
+
+
+export const getAllUsers = async (req: Request, res: Response) => {
+    try {
+        const users = await UserModel.getAllUsers();
+        const totalUsers = users.length;
+        res.status(200).json({ users, totalUsers });
+    }
+    catch (error) {
+        res.status(500).json({ error });
+        console.log(error);
+    }
+}
+
+
+
+
+
+
