@@ -82,6 +82,29 @@ export const getAllUsers = async (req: Request, res: Response) => {
     }
 }
 
+export const updateUser = async (req: Request, res: Response) => {
+    try {
+        const id = Number(req.params.id);
+        const { name, email, password } = req.body;
+        if (!id) {
+            return res.status(400).json({ message: "Invalid user id" });
+        }
+
+        // if (!name || !email) {
+        //     return res.status(400).json({ message: "Name and email are required" });
+        // }
+        let hashedPassword: string | undefined;
+        if (password) {
+  hashedPassword = await bcrypt.hash(password, 8);
+        }
+        const updatedUser = await UserModel.updateUser(id, name, email, hashedPassword);
+
+        res.status(200).json({ message: "User updated successfully", user: updatedUser });
+    } catch (error) {
+        res.status(500).json({ error });
+        console.log(error);
+    }
+}
 
 
 
