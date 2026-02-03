@@ -46,17 +46,36 @@ const UserModel = {
     },
 
     updateUser: async (id: number, name?: string, email?: string, password?: string): Promise<ResultSetHeader> => {
-        let query = `UPDATE users SET name = ?, email = ? `;
-        const values: any[] = [name, email];
+        let query = `UPDATE users SET  `;
+        const values : any[] = [];
 
-        if (password) {
-            query += `, password = ?`;
+        if (name !== undefined) {
+            query += `name = ? , `;
+            values.push(name);
+        }
+
+        if (email !== undefined) {
+            query += `email = ? , `;
+            values.push(email);
+        }
+
+        if (password !== undefined) {
+            query += `password = ? , `;
             values.push(password);
         }
+
+        query = query.slice(0, -2);
+
         query += ` WHERE id = ?`;
         values.push(id);
         const [result] = await db.execute<ResultSetHeader>(query, values);
-        return result ;
+        return result;
+    },
+
+    deleteUser: async (id: number): Promise<ResultSetHeader> => {
+        const query = `DELETE FROM users WHERE id = ?`;
+        const [result] = await db.execute<ResultSetHeader>(query, [id]);
+        return result;
     }
 };
 
